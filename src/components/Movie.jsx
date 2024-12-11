@@ -5,10 +5,18 @@ import { useState } from 'react';
 const Movie = ({ id, title, genre, year, description, deleteMovie }) => {
 
     // For each of the genres, let's use a different background color
-    const bgColor = genre==='Action'?'text-bg-danger': 
-                    genre==='Comedy'?'text-bg-success': 
-                    genre==='Romance'?'text-bg-warning':
-                    genre==='War'?'text-bg-secondary':'text-bg-dark';
+    const bgColors = {
+        Action: 'text-bg-danger',
+        Comedy: 'text-bg-success',
+        Romance: 'text-bg-warning',
+        War: 'text-bg-secondary'
+    }
+    const bgColor = bgColors[genre] || 'text-bg-dark';
+    // const bgColor = genre==='Action'?'text-bg-danger': 
+    //                 genre==='Comedy'?'text-bg-success': 
+    //                 genre==='Romance'?'text-bg-warning':
+    //                 genre==='War'?'text-bg-secondary':'text-bg-dark';
+    
 
     // Declaring a boolean to show or hide the description
     const [showDescription, setShowDescription] = useState(false);
