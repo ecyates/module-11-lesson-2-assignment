@@ -53,7 +53,7 @@ The current implementation of the user profile component has a bug in state mana
 - Initialize a state with a hardcoded list of movie titles using the useState hook.
 
 **Expected Outcome**:
-- The component should render an unordered list (<ul>) of movie titles.
+- The component should render an unordered list (`<ul>`) of movie titles.
 
 ### Task 2: Conditional Rendering of Movie Details
 
